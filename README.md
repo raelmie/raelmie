@@ -5,7 +5,7 @@
 - 📫 How to reach me on<br>
   <ol>
        <li> facebook  -> facebook.com/jayremie.calvin</li>
-       <li>whatsapp  -> wa.me/+265980941831</li>
+       <li>whatsapp  -> wa.me/+265887678685</li>
        <li>instagram -> raelmie</li>
         <li>email     -> raelmie@gmail.com</li>
   </ol>
