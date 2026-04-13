@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Members - Tili Ready Chess Club</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    background: #020617;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #1e293b;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    width: 140px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 140px;
+    object-fit: cover; /* MAGIC: keeps all images same size */
+    border-radius: 10px;
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.role {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+footer {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="tournament.html">Tournament</a>
+        <a href="rules.html">Rules</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<section>
+    <h1>♟️ Members</h1>
+    <p>The minds behind the moves (and occasional disasters).</p>
+
+    <div class="grid">
+
+        <!-- MEMBER CARD -->
+        <div class="card">
+            <img src="images/rael.jpg" class="profile-pic">
+            <div class="name">Rael Akufa | raelmie</div>
+            <div class="role">Founder - "The world is made of smartphones and stupid people."</div>
+        </div>
+
+        <div class="card">
+            <img src="images/nijo.jpg" class="profile-pic">
+            <div class="name">John Mhinji | MHINJI999</div>
+            <div class="role">Co-founder & organizer</div>
+        </div>
+
+        <div class="card">
+            <img src="images/blank.jpg" class="profile-pic">
+            <div class="name">Alinuswe Nyondo | Alinuswenyondo</div>
+            <div class="role">Member</div>
+        </div>
+
+        <div class="card">
+            <img src="images/boyole.jpg" class="profile-pic">
+            <div class="name">Ezekiel Manda | Boyole</div>
+            <div class="role">Member & Loverboy</div>
+        </div>
+
+        <div class="card">
+            <img src="images/canto.jpg" class="profile-pic">
+            <div class="name">Isaac Bwanali | Canto604</div>
+            <div class="role">Member</div>
+        </div>
+
+        <div class="card">
+            <img src="images/blank.jpg" class="profile-pic">
+            <div class="name">Wezi</div>
+            <div class="role">Member</div>
+        </div>
+
+        <div class="card">
+            <img src="images/blank.jpg" class="profile-pic">
+            <div class="name">Innocent Mpotalinga</div>
+            <div class="role">Member</div>
+        </div>
+
+        <div class="card">
+            <img src="images/sydney.jpg" class="profile-pic">
+            <div class="name">Sydney Nkhoma | unclesid1</div>
+            <div class="role">Certified Member</div>
+        </div>
+        
+        <div class="card">
+            <img src="images/terry.jpg" class="profile-pic">
+            <div class="name">Terrence Chipeta | ineyoo</div>
+            <div class="role">Member</div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Tili Ready Chess Club</p>
+</footer>
+
+</body>
+</html>
