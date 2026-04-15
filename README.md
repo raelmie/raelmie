@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tili Ready Chess Club</title>
-
+<script>
+window.onload = function() {
+    alert("Please use the navigation buttons within the website instead of your device navigation keys.");
+};
+</script>
 <style>
 body {
     margin: 0;
