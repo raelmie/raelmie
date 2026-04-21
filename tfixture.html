@@ -53,7 +53,7 @@ const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQRwCCvjQV4js6ok-G_
 fetch(url)
   .then(response => response.text())
   .then(data => {
-    const rows = data.trim().split("\\n");
+    const rows = data.trim().split("\n");
     const table = document.getElementById("sheetTable");
 
     rows.forEach((row, index) => {
