@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Tournament Fixtures</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    margin: 20px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 800px;
+    background: #1e293b;
+}
+
+td, th {
+    border: 1px solid #334155;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background: #020617;
+}
+
+tr:hover {
+    background: #334155;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Chess Tournament Fixtures</h1>
+
+<table id="sheetTable"></table>
+
+<script>
+const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQRwCCvjQV4js6ok-G_0brN6bYfbzZA08xTCZ-bg6aGvEq9ZaUGsy-nzwZuPjMECTocvRxBc_AtrpoH/pub?gid=1094257991&single=true&output=csv&range=A1:D43";
+
+fetch(url)
+  .then(response => response.text())
+  .then(data => {
+    const rows = data.trim().split("\\n");
+    const table = document.getElementById("sheetTable");
+
+    rows.forEach((row, index) => {
+      const tr = document.createElement("tr");
+
+      row.split(",").forEach(cell => {
+        const element = document.createElement(index === 0 ? "th" : "td");
+        element.textContent = cell;
+        tr.appendChild(element);
+      });
+
+      table.appendChild(tr);
+    });
+  });
+</script>
+
+</body>
+</html>
