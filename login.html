@@ -1,5 +1,85 @@
 <!DOCTYPE html>
 <html>
+  <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    background: #020617;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #1e293b;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    width: 140px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 140px;
+    object-fit: cover; /* MAGIC: keeps all images same size */
+    border-radius: 10px;
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.role {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+footer {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+  </style>
 <body>
   <button onclick="goBack()">Back</button>
 
