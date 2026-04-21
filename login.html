@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button onclick="goBack()">Back</button>
+
+<h2>Create User</h2>
+
+<input id="user" placeholder="Username"><br><br>
+<input id="pass" placeholder="Password" type="password"><br><br>
+
+<button onclick="register()">Register</button>
+
+<p id="msg"></p>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwD8Uso-M_wfDoQYxU8ST3ahsmHEhNW6Ec6_P34CHB1cjzWyOwE1wag-CX4OiF14bo/exec ";
+
+async function register() {
+    const username = document.getElementById("user").value;
+    const password = document.getElementById("pass").value;
+
+    const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({ username, password })
+    });
+
+    const data = await res.json();
+
+    document.getElementById("msg").innerText = "User created in sheet";
+}
+  function goBack() {
+    if (document.referrer !== "") {
+        history.back();
+    } else {
+        window.location.href = "index.html"; // fallback page
+    }
+  } 
+</script>
+
+</body>
+</html> 
