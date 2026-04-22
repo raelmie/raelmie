@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#msg {
+    margin-top: 10px;
+    text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Login</h2>
+
+    <input id="user" placeholder="Username">
+    <input id="pass" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+
+const SCRIPT_URL = "YOUR_APPS_SCRIPT_URL_HERE";
+
+async function login() {
+    const username = document.getElementById("user").value;
+    const password = document.getElementById("pass").value;
+
+    const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({ username, password })
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+    document.getElementById("msg").innerText = "Login successful";
+    document.getElementById("msg").style.color = "lightgreen";
+
+    // Redirect after a short delay (optional but cleaner UX)
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 800);
+
+} else {
+    document.getElementById("msg").innerText = "Invalid credentials";
+    document.getElementById("msg").style.color = "red";
+    } 
+}
+
+</script>
+
+</body>
+</html>
