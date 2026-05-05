@@ -101,7 +101,7 @@ footer {
 
 <section id="updates">
     <h2>Updates</h2>
-    <div class="card">April 2nd Week tournament in progress. Check tournament card to see more.</div>
+    <div class="card">May First Week tournament in progress. Check tournament card to see more.</div>
 </section>
 
 <footer>
